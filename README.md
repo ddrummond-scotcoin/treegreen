@@ -71,6 +71,11 @@ Table will be empty by default
 $ curl -X POST http://localhost:8000/uplink -H "Content-Type:application/json" -d '{"device":"1234", "data":"0", "station":"0001", "rssi":null, "duplicate":false}'
 ```
 
+ACUTAL CALLBACK FOR THIS MODIFIED APP
+
+curl -X POST http://192.168.1.141:8000/uplipe:application/json" -d '{"device" : "2148E3","deviceType" : "Egg Lighting","time" : "1505241521","duplicate" : "false","snr" : "35.31","station" : "1CD7","data" : "01020304","avgSnr" : "28.48","lat" : "56.0","lng" : "-4.0","rssi" : "-116.00","seqNumber" : "18","channelPartner" : "amphy"}'
+
+
 #### Downlink callback
 ```
 $ curl -X POST http://localhost:8000/downlink -H "Content-Type:application/json" -d '{"device":"1234", "data":"0", "station":"04E0", "rssi":-122, "duplicate":false}'
