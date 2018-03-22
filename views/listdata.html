@@ -14,7 +14,7 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Callbacks history</span>
+          <span class="mdl-layout-title">Data column</span>
           <div class="mdl-layout-spacer"></div>
         </div>
       </header>
@@ -23,39 +23,13 @@
           <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
             <thead>
               <tr>
-                <th>Device</th>
-		<th>Device Type</th>
-                <th class="mdl-data-table__cell--non-numeric mdl-data-table__header--sorted-descending">Request Time</th>
-		<th>Duplicate</th>
-		<th>SNR</th>
-                <th>Station</th>
 		<th>Data</th>
-		<th>Avg SNR</th>
-		<th>Lat</th>
-		<th>Lng</th>
-                <th>Rssi</th>
-		<th>SeqNumber</th>
-                <th>Channel Partner</th>
-                <th class="mdl-data-table__cell--non-numeric">Type</th>
               </tr>
             </thead>
             <tbody>
               {{#each rows}}
                 <tr>
-                  <td>{{device}}</td>
-		  <td>{{devicetype}}</td>
-                  <td class="mdl-data-table__cell--non-numeric">{{requesttime}}</td>
-                  <td>{{#if duplicate}}✔{{/if}}</td>
-		  <td>{{snr}}</td>
-		  <td>{{station}}</td>
                   <td>{{data}}</td>
-		  <td>{{avgsnr}}</td>
-		  <td>{{lat}}</td>
-		  <td>{{lng}}</td>
- 	          <td>{{rssi}}</td>
-		  <td>{{seqnumber}}</td>
-		  <td>{{channelpartner}}</td>
-                  <td class="mdl-data-table__cell--non-numeric">{{type}}</td>
                 </tr>
               {{/each}}
 
