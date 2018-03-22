@@ -26,6 +26,13 @@ pool.connect((err, client, done) => {
     })
     .catch(e=>console.log(e.stack));
   };
+  const homedata = function(request, reply){
+    client.query("selct * from callback order by requesttime desc")
+    .then(res => {
+      reply.view('listdata', {rows:res.rows});
+    })
+    .catch(e=>console.log(e.stack));
+  };
   const uplinkCallback = function (request, reply){
     reply('Callback received').code(200);
     recordCallback('data/uplink', request);
@@ -84,6 +91,11 @@ pool.connect((err, client, done) => {
       method: 'GET',
       path:'/',
       handler: home
+  });
+  server.route({
+      method: 'GET',
+      path:'/data',
+      handler: homedata
   });
   server.route({
       method: 'POST',
